@@ -1,0 +1,2 @@
+
+export default function Cart() { return <div style={{ padding: '8rem 2rem', fontFamily: "'Cormorant Garamond', serif", fontSize: '2rem', color: '#6b6b6b', textAlign: 'center' }}>Cart — The Scene</div>; }

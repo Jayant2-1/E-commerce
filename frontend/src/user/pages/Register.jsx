@@ -1,0 +1,3 @@
+export default function Register() { return <div style={{ padding: '8rem 2rem', fontFamily: "'Cormorant Garamond', serif", fontSize: '2rem', color: '#6b6b6b', textAligexport default function Wishlist() { return <div style={{ padding: '8rem 2rem', fontFamil 'EOF
+cat > src/user/pages/Checkout.jsx << 'EOF'
+export default function Checkout() { return <div style={{ padding: '8rem 2rem', fontFamily: "'Cormorant Garamond', serif", fontSize: '2rem', color: '#6edexs<export default function Checkout() { return <div style={{ padding: '8rem 2rem', fontFamily: "'Cormorant Garamond', serif", fontSize: '2rem', color: '#6edexs<export default function Checkout() { return <div style={{ padding: '8rem 2rem', fontFamily: "'Cormorant Ga; }

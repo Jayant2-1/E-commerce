@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Electronics Phone 1",
+    "price": 93054,
+    "quantity": 50,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Laptop 2",
+    "price": 111826,
+    "quantity": 24,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Tablet 3",
+    "price": 762,
+    "quantity": 71,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Smartwatch 4",
+    "price": 23580,
+    "quantity": 82,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Earbuds 5",
+    "price": 6149,
+    "quantity": 16,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Monitor 6",
+    "price": 115045,
+    "quantity": 35,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Keyboard 7",
+    "price": 12897,
+    "quantity": 68,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Mouse 8",
+    "price": 88861,
+    "quantity": 56,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Speaker 9",
+    "price": 52537,
+    "quantity": 6,
+    "category": "Electronics"
+  },
+  {
+    "name": "Electronics Charger 10",
+    "price": 84009,
+    "quantity": 52,
+    "category": "Electronics"
+  },
+  {
+    "name": "Gaming Controller 1",
+    "price": 9909,
+    "quantity": 85,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming Gaming Mouse 2",
+    "price": 9172,
+    "quantity": 11,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming Gaming Keyboard 3",
+    "price": 1876,
+    "quantity": 89,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming Headset 4",
+    "price": 6363,
+    "quantity": 47,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming Gaming Chair 5",
+    "price": 4588,
+    "quantity": 23,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming Console Accessory 6",
+    "price": 6373,
+    "quantity": 54,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming VR Accessory 7",
+    "price": 6522,
+    "quantity": 86,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming RGB Pad 8",
+    "price": 6317,
+    "quantity": 38,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming Webcam 9",
+    "price": 2952,
+    "quantity": 41,
+    "category": "Gaming"
+  },
+  {
+    "name": "Gaming Microphone 10",
+    "price": 2006,
+    "quantity": 18,
+    "category": "Gaming"
+  },
+  {
+    "name": "Books Programming 1",
+    "price": 933,
+    "quantity": 34,
+    "category": "Books"
+  },
+  {
+    "name": "Books DSA 2",
+    "price": 4793,
+    "quantity": 97,
+    "category": "Books"
+  },
+  {
+    "name": "Books System Design 3",
+    "price": 1582,
+    "quantity": 94,
+    "category": "Books"
+  },
+  {
+    "name": "Books Java 4",
+    "price": 3253,
+    "quantity": 95,
+    "category": "Books"
+  },
+  {
+    "name": "Books Spring Boot 5",
+    "price": 9301,
+    "quantity": 29,
+    "category": "Books"
+  },
+  {
+    "name": "Books Clean Code 6",
+    "price": 1463,
+    "quantity": 66,
+    "category": "Books"
+  },
+  {
+    "name": "Books Database 7",
+    "price": 629,
+    "quantity": 59,
+    "category": "Books"
+  },
+  {
+    "name": "Books Algorithms 8",
+    "price": 5668,
+    "quantity": 19,
+    "category": "Books"
+  },
+  {
+    "name": "Books Networking 9",
+    "price": 5998,
+    "quantity": 14,
+    "category": "Books"
+  },
+  {
+    "name": "Books Interview Prep 10",
+    "price": 311,
+    "quantity": 98,
+    "category": "Books"
+  },
+  {
+    "name": "Fashion Hoodie 1",
+    "price": 8661,
+    "quantity": 9,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Tshirt 2",
+    "price": 3777,
+    "quantity": 57,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Jeans 3",
+    "price": 513,
+    "quantity": 62,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Sneakers 4",
+    "price": 9223,
+    "quantity": 94,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Jacket 5",
+    "price": 554,
+    "quantity": 28,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Cap 6",
+    "price": 7361,
+    "quantity": 62,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Shirt 7",
+    "price": 3077,
+    "quantity": 56,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Joggers 8",
+    "price": 5075,
+    "quantity": 19,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Watch 9",
+    "price": 2354,
+    "quantity": 92,
+    "category": "Fashion"
+  },
+  {
+    "name": "Fashion Backpack 10",
+    "price": 3370,
+    "quantity": 33,
+    "category": "Fashion"
+  },
+  {
+    "name": "Home Chair 1",
+    "price": 6299,
+    "quantity": 9,
+    "category": "Home"
+  },
+  {
+    "name": "Home Lamp 2",
+    "price": 597,
+    "quantity": 66,
+    "category": "Home"
+  },
+  {
+    "name": "Home Table 3",
+    "price": 5584,
+    "quantity": 41,
+    "category": "Home"
+  },
+  {
+    "name": "Home Storage Box 4",
+    "price": 4239,
+    "quantity": 32,
+    "category": "Home"
+  },
+  {
+    "name": "Home Vacuum 5",
+    "price": 7709,
+    "quantity": 22,
+    "category": "Home"
+  },
+  {
+    "name": "Home Curtain 6",
+    "price": 9844,
+    "quantity": 52,
+    "category": "Home"
+  },
+  {
+    "name": "Home Bottle 7",
+    "price": 8999,
+    "quantity": 52,
+    "category": "Home"
+  },
+  {
+    "name": "Home Cookware 8",
+    "price": 7619,
+    "quantity": 82,
+    "category": "Home"
+  },
+  {
+    "name": "Home Bedsheet 9",
+    "price": 6618,
+    "quantity": 52,
+    "category": "Home"
+  },
+  {
+    "name": "Home Fan 10",
+    "price": 9540,
+    "quantity": 77,
+    "category": "Home"
+  },
+  {
+    "name": "Sports Football 1",
+    "price": 9998,
+    "quantity": 53,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Basketball 2",
+    "price": 7553,
+    "quantity": 95,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Cricket Bat 3",
+    "price": 9095,
+    "quantity": 9,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Yoga Mat 4",
+    "price": 600,
+    "quantity": 54,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Dumbbell 5",
+    "price": 5282,
+    "quantity": 70,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Skipping Rope 6",
+    "price": 6511,
+    "quantity": 92,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Tennis Racket 7",
+    "price": 4344,
+    "quantity": 37,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Gym Gloves 8",
+    "price": 6395,
+    "quantity": 28,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Bottle 9",
+    "price": 3564,
+    "quantity": 44,
+    "category": "Sports"
+  },
+  {
+    "name": "Sports Sports Bag 10",
+    "price": 8188,
+    "quantity": 16,
+    "category": "Sports"
+  },
+  {
+    "name": "Beauty Face Wash 1",
+    "price": 9166,
+    "quantity": 48,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Shampoo 2",
+    "price": 8412,
+    "quantity": 96,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Conditioner 3",
+    "price": 8517,
+    "quantity": 20,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Moisturizer 4",
+    "price": 7141,
+    "quantity": 78,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Perfume 5",
+    "price": 8977,
+    "quantity": 36,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Body Wash 6",
+    "price": 7294,
+    "quantity": 30,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Lip Balm 7",
+    "price": 6913,
+    "quantity": 87,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Hair Oil 8",
+    "price": 9419,
+    "quantity": 88,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Serum 9",
+    "price": 9578,
+    "quantity": 80,
+    "category": "Beauty"
+  },
+  {
+    "name": "Beauty Sunscreen 10",
+    "price": 1348,
+    "quantity": 88,
+    "category": "Beauty"
+  },
+  {
+    "name": "Groceries Rice 1",
+    "price": 7533,
+    "quantity": 68,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Pasta 2",
+    "price": 737,
+    "quantity": 8,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Tea 3",
+    "price": 4517,
+    "quantity": 22,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Coffee 4",
+    "price": 7339,
+    "quantity": 58,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Olive Oil 5",
+    "price": 8802,
+    "quantity": 37,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Peanut Butter 6",
+    "price": 9727,
+    "quantity": 50,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Oats 7",
+    "price": 2442,
+    "quantity": 36,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Chocolate 8",
+    "price": 2187,
+    "quantity": 20,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Juice 9",
+    "price": 7865,
+    "quantity": 7,
+    "category": "Groceries"
+  },
+  {
+    "name": "Groceries Snacks 10",
+    "price": 4467,
+    "quantity": 40,
+    "category": "Groceries"
+  },
+  {
+    "name": "Toys Puzzle 1",
+    "price": 8235,
+    "quantity": 58,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Remote Car 2",
+    "price": 8895,
+    "quantity": 60,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Action Figure 3",
+    "price": 900,
+    "quantity": 75,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Building Blocks 4",
+    "price": 3863,
+    "quantity": 54,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Drone Toy 5",
+    "price": 8721,
+    "quantity": 80,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Board Game 6",
+    "price": 1946,
+    "quantity": 5,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Teddy 7",
+    "price": 2979,
+    "quantity": 46,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Mini Car 8",
+    "price": 7484,
+    "quantity": 81,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Robot 9",
+    "price": 5159,
+    "quantity": 62,
+    "category": "Toys"
+  },
+  {
+    "name": "Toys Toy Gun 10",
+    "price": 7618,
+    "quantity": 64,
+    "category": "Toys"
+  },
+  {
+    "name": "Accessories Phone Case 1",
+    "price": 1572,
+    "quantity": 76,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Laptop Sleeve 2",
+    "price": 1464,
+    "quantity": 68,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Wallet 3",
+    "price": 6236,
+    "quantity": 34,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Power Bank 4",
+    "price": 4979,
+    "quantity": 32,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Cable 5",
+    "price": 7164,
+    "quantity": 100,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Tripod 6",
+    "price": 6732,
+    "quantity": 64,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Stand 7",
+    "price": 462,
+    "quantity": 49,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Organizer 8",
+    "price": 4386,
+    "quantity": 90,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Bag 9",
+    "price": 1358,
+    "quantity": 52,
+    "category": "Accessories"
+  },
+  {
+    "name": "Accessories Bottle 10",
+    "price": 8860,
+    "quantity": 66,
+    "category": "Accessories"
+  }
+]

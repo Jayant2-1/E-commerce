@@ -1,0 +1,46 @@
+{
+  "adminEmail": "admin@ecommerce.local",
+  "adminPassword": "Admin@12345",
+  "users": [
+    {
+      "email": "user1@ecommerce.local",
+      "password": "User1-be0li10cA1!"
+    },
+    {
+      "email": "user2@ecommerce.local",
+      "password": "User2-9nmlwzluA1!"
+    },
+    {
+      "email": "user3@ecommerce.local",
+      "password": "User3-ajj6g4bdA1!"
+    },
+    {
+      "email": "user4@ecommerce.local",
+      "password": "User4-9lu4ksakA1!"
+    },
+    {
+      "email": "user5@ecommerce.local",
+      "password": "User5-rqcovnl8A1!"
+    },
+    {
+      "email": "user6@ecommerce.local",
+      "password": "User6-5qpwaszgA1!"
+    },
+    {
+      "email": "user7@ecommerce.local",
+      "password": "User7-wam38ce7A1!"
+    },
+    {
+      "email": "user8@ecommerce.local",
+      "password": "User8-vbehddb1A1!"
+    },
+    {
+      "email": "user9@ecommerce.local",
+      "password": "User9-nk0k39iiA1!"
+    },
+    {
+      "email": "user10@ecommerce.local",
+      "password": "User10-8j1zooufA1!"
+    }
+  ]
+}

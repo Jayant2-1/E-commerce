@@ -1,0 +1,470 @@
+/* ═══════════════════════════════════════════════════════════════
+   CINEMA V2 — The E-Commerce Film
+   Every frame could be a screenshot.
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-title: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+  --black: #060606;
+  --near-black: #0d0d0d;
+  --dark: #141414;
+  --charcoal: #1f1f1f;
+  --gray: #6b6b6b;
+  --silver: #a0a0a0;
+  --white: #ededed;
+  --pure: #ffffff;
+  --gold: #c49b5e;
+  --deep-blue: #0a1628;
+  --emerald: #1a3a2a;
+  --crimson: #2a0a16;
+  --indigo: #141028;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { background: var(--black); }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── 16mm Film Grain ── */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: screen;
+}
+.film-grain::after {
+  content: '';
+  position: absolute;
+  inset: -80%;
+  width: 260%;
+  height: 260%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  animation: grain 0.4s steps(3) infinite;
+}
+@keyframes grain {
+  0% { transform: translate(-2%, -1%) rotate(0.4deg); }
+  33% { transform: translate(1%, 1%) rotate(-0.2deg); }
+  66% { transform: translate(-1%, 2%) rotate(0.1deg); }
+  100% { transform: translate(2%, -1%) rotate(-0.3deg); }
+}
+
+/* ── Letterbox ── */
+.letterbox {
+  position: fixed;
+  left: 0; right: 0;
+  z-index: 200;
+  background: var(--black);
+  pointer-events: none;
+}
+.letterbox-t { top: 0; height: min(3vh, 24px); }
+.letterbox-b { bottom: 0; height: min(3vh, 24px); }
+
+/* ── Custom Cursor ── */
+#custom-cursor {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+#custom-cursor .dot {
+  width: 6px; height: 6px;
+  background: var(--pure);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s, height 0.15s, border-radius 0.15s;
+}
+#custom-cursor .ring {
+  width: 30px; height: 30px;
+  border: 1px solid var(--pure);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s, height 0.25s, border-color 0.25s, background 0.25s;
+}
+#custom-cursor.cta .ring {
+  width: 56px; height: 56px;
+  background: rgba(255,255,255,0.06);
+}
+#custom-cursor.crosshair .ring {
+  width: 22px; height: 22px;
+  border-color: var(--gold);
+  background: transparent;
+}
+#custom-cursor.crosshair .ring::before,
+#custom-cursor.crosshair .ring::after {
+  content: '';
+  position: absolute;
+  background: var(--gold);
+}
+#custom-cursor.crosshair .ring::before {
+  top: 50%; left: -5px; right: -5px;
+  height: 1px; transform: translateY(-50%);
+}
+#custom-cursor.crosshair .ring::after {
+  left: 50%; top: -5px; bottom: -5px;
+  width: 1px; transform: translateX(-50%);
+}
+#custom-cursor.text .dot {
+  width: 2px; height: 18px;
+  border-radius: 1px;
+}
+#custom-cursor.text .ring { display: none; }
+
+/* ── Scroll Progress ── */
+#scroll-progress {
+  position: fixed;
+  bottom: 3vh; left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--gray);
+  letter-spacing: 0.15em;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+}
+#scroll-progress:hover { opacity: 0.6; }
+#scroll-progress .line {
+  width: 100px;
+  height: 1px;
+  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+}
+#scroll-progress .line span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--silver);
+  transition: width 0.1s linear;
+}
+
+/* ── Scene Counter ── */
+.scene-marker {
+  position: fixed;
+  right: 2rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  opacity: 0.25;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  color: var(--gray);
+  letter-spacing: 0.2em;
+  pointer-events: none;
+}
+.scene-marker .current {
+  color: var(--white);
+  font-size: 0.65rem;
+}
+
+/* ── Cinematic Containers ── */
+.scene {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.scene__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.scene__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ── Asymmetric Split Layout ── */
+.split-scene {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+.split-scene > * {
+  position: relative;
+  overflow: hidden;
+}
+.split-scene--60-40 {
+  grid-template-columns: 3fr 2fr;
+}
+.split-scene--40-60 {
+  grid-template-columns: 2fr 3fr;
+}
+
+/* ── Typography ── */
+.display {
+  font-family: var(--font-title);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.display-heavy {
+  font-family: var(--font-title);
+  font-weight: 600;
+}
+.sans {
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+}
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+.uppercase-sm {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* ── Text Emergence ── */
+.text-emerge {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(20px);
+}
+.text-emerge.in {
+  animation: emerge 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes emerge {
+  0% { opacity: 0; filter: blur(12px); transform: translateY(20px); }
+  60% { opacity: 0.6; filter: blur(3px); transform: translateY(-2px); }
+  100% { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+/* ── Image Reveal ── */
+.img-reveal {
+  position: relative;
+  overflow: hidden;
+}
+.img-reveal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--black);
+  transform: translateX(0);
+  z-index: 2;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.img-reveal.revealed::after {
+  transform: translateX(101%);
+}
+
+/* ── Split Reveal (door opening) ── */
+.door-reveal {
+  position: relative;
+  overflow: hidden;
+}
+.door-reveal .left,
+.door-reveal .right {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: var(--dark);
+  transition: transform 1.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.door-reveal .left { transform-origin: left center; }
+.door-reveal .right { transform-origin: right center; transform: translateX(0); }
+.door-reveal.open .left { transform: translateX(-100%); }
+.door-reveal.open .right { transform: translateX(100%); }
+
+/* ── Glass Panel ── */
+.glass {
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ── Ambient Grid ── */
+.ambient-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+}
+
+/* ── Vignette ── */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 45%, var(--black) 100%);
+  z-index: 1;
+}
+
+/* ── Horizontal Scroll Section ── */
+.horizontal-scroll {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.horizontal-scroll__track {
+  display: flex;
+  gap: 0;
+  will-change: transform;
+}
+.horizontal-scroll__panel {
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* ── Button Styles ── */
+.btn-cinema {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-cinema::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--white);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+.btn-cinema:hover::before { transform: scaleY(1); }
+.btn-cinema:hover { color: var(--black); }
+.btn-cinema span { position: relative; z-index: 1; }
+
+.btn-cinema--light {
+  background: var(--white);
+  color: var(--black);
+  border: none;
+}
+.btn-cinema--light:hover { background: var(--silver); color: var(--black); }
+
+/* ── Product Card ── */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.product-card__image {
+  aspect-ratio: 3/4;
+  position: relative;
+  overflow: hidden;
+}
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.product-card:hover .product-card__image img { transform: scale(1.08); }
+.product-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 50%);
+  z-index: 2;
+}
+.product-card__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 3;
+}
+
+/* ── Drawer / Side Panel ── */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.drawer-overlay.open { opacity: 1; pointer-events: all; }
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 480px;
+  max-width: 100vw;
+  height: 100vh;
+  z-index: 501;
+  background: var(--near-black);
+  border-left: 1px solid rgba(255,255,255,0.06);
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 2rem;
+  overflow-y: auto;
+}
+.drawer.open { transform: translateX(0); }
+
+/* ── Film Strip ── */
+.film-strip {
+  display: flex;
+  gap: 2px;
+  overflow: hidden;
+}
+.film-strip__frame {
+  flex-shrink: 0;
+  width: 200px;
+  aspect-ratio: 4/3;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Counter Animation ── */
+.count-up {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum";
+}
